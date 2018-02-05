@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var SignInUser=function(){return function(e,r){void 0===e&&(e="User Name"),void 0===r&&(r="******"),this.userName=e,this.pwd=r}}();exports.SignInUser=SignInUser;

@@ -1,0 +1,14 @@
+@mixin clearFix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin menu-right-border{
+    border-right: {
+        width: 1px;
+        style: outset;
+    }
+}

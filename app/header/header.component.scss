@@ -1,0 +1,37 @@
+@import "../shared/style/scss/classes";
+@import "../shared/style/scss/variables";
+@import "../shared/style/scss/mixins";
+
+
+// Main-Nav Start
+#main-nav{
+    background: $deepBlue;
+    ul{
+        width: 100%; 
+        @include clearFix;  
+    }
+    li{
+        float: left;        
+        width: 10%;
+    }
+    a{
+        color: $offwhite;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        height: 32px;
+        padding-top: 12px;
+        &:hover{
+            background:lighten($deepBlue,6);
+        }
+    }
+    span{
+        float: left;
+        display: block;
+        color: $offwhite;
+        font-size: smaller;
+        position: relative;
+        top: 4px;
+    }
+}
+// Main-Nav Ends

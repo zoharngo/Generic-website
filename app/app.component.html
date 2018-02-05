@@ -1,0 +1,10 @@
+<header>
+  <app-header (onMenuClick)="loadForm($event)"></app-header>
+</header>
+<main>
+  <div class="wrapper" [ngSwitch]="action">
+    <register-form *ngSwitchCase="'Register'"></register-form>
+    <login-form *ngSwitchCase="'Login'"></login-form>
+    <app-home *ngSwitchDefault></app-home>
+  </div>
+</main>

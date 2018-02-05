@@ -1,0 +1,23 @@
+<div class="form-wrapper">
+  <form>
+    <label for="fname">First Name</label>
+    <input name="firstName" id="fname" type="text" placeholder="First Name.." [(ngModel)]="registerUser.firstName" />
+    <label for="lname">Last Name</label>
+    <input name="lastName" id="lname" type="text" placeholder="Last Name.." [(ngModel)]="registerUser.lastName" />
+    <label for="bDate">Birth Date</label>
+    <input name="birthDate" id="bDate" type="date" [(ngModel)]="registerUser.birthDate" />
+    <label for="country">Country</label>
+    <select name="country" id="country" [(ngModel)]="registerUser.country" (change)="setFlag()">
+        <option [ngValue]="undefined">Please Select</option>
+        <option *ngFor="let country of countriesList" [value]="country.name">
+          {{country.name}}
+        </option>
+      </select>
+      <span *ngIf="flagURL">
+        <img [src]="flagURL">
+      </span>
+    <input id="login" type="submit" />
+  </form>
+</div>
+
+<p *ngFor="let x of countryList">{{x.name}}</p>
