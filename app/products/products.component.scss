@@ -1,0 +1,33 @@
+@import "../shared/style/scss/variables";
+@import "../shared/style/scss/mixins";
+
+
+div{
+    width: 100%;
+    padding: 1%;
+    form{
+        margin: {
+            top: 2%;
+            bottom: 2%;
+        }
+        text-align: center;
+    }
+    .books-wrapper{
+        padding-left: 8%;
+        .book {    
+            display: block;
+            float: left;
+            height: 300px;
+            padding: 5px;
+            width: (100%/5);
+            margin-bottom: 2%;
+            cursor: pointer;
+        }
+        @include clearFix;
+    }
+    
+ 
+
+}
+
+

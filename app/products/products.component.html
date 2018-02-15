@@ -1,0 +1,16 @@
+<div>
+  <h1>{{title}}</h1>
+  <form novalidate (ngSubmit)="fillterBooks(fillterInput.value)">
+    <label for="search">search:</label>
+    <input name="search" type="search" #fillterInput />
+    <input type="submit" value="search" />
+  </form>
+
+
+  <div class="books-wrapper">
+
+    <div class="book" *ngFor="let book of products">
+      <product-preview (click)="showDetails(book.id)" [productPreview]="book"></product-preview>
+    </div>
+  </div>
+</div>

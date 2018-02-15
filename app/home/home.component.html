@@ -1,3 +1,8 @@
-<p>
-  home works!
-</p>
+<div>
+    <h1>Welcome to our {{store.storeName}}</h1>
+    <img [src]="store.logoImgURL" />
+    <h2>{{store.address | addressFormat}}</h2>
+    <h3>
+        <country-info [country]="store.address"></country-info>
+    </h3>
+</div>

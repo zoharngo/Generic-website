@@ -1,0 +1,18 @@
+div{
+    height: 35px;
+
+.country-img{
+    float: right; 
+    img{
+        width: 40px;
+        height: 25px;
+    }
+}
+.country-name {
+    float: left;
+}
+.country-name , .country-img{
+    margin-bottom: 1%;
+    display: inline-block;
+}
+}

@@ -1,0 +1,11 @@
+ul {
+  color: #032f3e;
+  font-size: smaller; }
+  ul li {
+    display: block;
+    text-align: center;
+    margin-bottom: 4%; }
+  ul a {
+    display: block; }
+  ul img {
+    height: 191px; }

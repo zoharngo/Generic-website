@@ -12,21 +12,36 @@ export class RegisterFormComponent implements OnInit {
 
   registerUser: NewUser = new NewUser();
   countriesList: Array<Country>;
-  flagURL: string;
+  countryListMode = false;
+  selectedCountry: Country;
 
-  constructor(private countriesSrv: CountriesService) { }
+  constructor(private countriesSrv: CountriesService) {
+    this.selectedCountry = new Country();
+    this.selectedCountry.name = "";
+    this.selectedCountry.flag = "";
+  }
 
   ngOnInit() {
     if (!this.countriesList) {
-      let callback = (res: Array<any>) => {
+      this.countriesSrv.fetchCountriesFlags().subscribe((res: Country[]) => {
         this.countriesList = res;
-        console.log(this.countriesList);
-      }
-      this.countriesSrv.fetchCountriesFlags(callback);
+        this.selectedCountry = this.countriesList.find((country) => {
+          return country.name.indexOf('Israel') > -1;
+        });
+
+        console.log("stop");
+      });
     }
   }
 
-  setFlag($event): void {
-    this.flagURL = this.countriesList[event.target.selectedIndex - 1].flag;
+  onSelectCountry(): void {
+    this.countryListMode = !this.countryListMode;
+  }
+
+  setCountrySelection(country: Country): void {
+    console.log(country);
+    this.onSelectCountry();
+    this.registerUser.country = country.name;
+    this.selectedCountry = country;
   }
 }

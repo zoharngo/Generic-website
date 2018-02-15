@@ -1,16 +1,20 @@
 <nav id="main-nav">
-  <div class="wrapper">
-    <span id="avatar">
-      <img src="/assets/images/avatar/user.png" alt="">
-      <span>Hello {{user.firstName}} !</span>
-    </span>
-    <ul>
-      <li>
-        <a href="#" (click)="publish()">Login</a>
-      </li>
-      <li>
-        <a href="#" (click)="publish()">Register</a>
-      </li>
-    </ul>
-  </div>
+  <span id="avatar">
+    <img src="/assets/images/avatar/user.png" alt="">
+    <span>Hello {{user.firstName}} !</span>
+  </span>
+  <ul>
+    <li>
+      <a routerLink="/home">Home</a>
+    </li>
+    <li>
+      <a href="#" *ngIf="user.firstName!='guest'">My-Cart</a>
+    </li>
+    <li>
+      <a routerLink="/products">Products</a>
+    </li>
+    <li>
+      <a routerLink="/account">My-Account</a>
+    </li>
+  </ul>
 </nav>

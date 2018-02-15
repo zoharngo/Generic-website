@@ -1,0 +1,27 @@
+<div>
+    <h1>{{title}}</h1>
+    <a  routerLink="/products" >Back</a>
+    <ul>
+        <li>
+            <span class="title">{{productDetails?.title}}</span>
+        </li>
+        <li *ngIf="productDetails?.imageLinks?.smallThumbnail">
+            <img [src]="productDetails.imageLinks.smallThumbnail">
+        </li>
+
+        <li *ngIf="productDetails?.authors?.length > 0">
+            <span>
+                <b>Authors:</b>
+            </span>
+            <span *ngFor="let author of productDetails.authors">{{author}}</span>
+        </li>
+
+        <li *ngIf="productDetails?.description">
+            <p>
+                <span>
+                    <b>Description:</b>
+                </span>{{productDetails.description}}</p>
+        </li>
+        
+    </ul>
+</div>

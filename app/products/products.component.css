@@ -1,0 +1,21 @@
+div {
+  width: 100%;
+  padding: 1%; }
+  div form {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center; }
+  div .books-wrapper {
+    padding-left: 8%; }
+    div .books-wrapper .book {
+      display: block;
+      float: left;
+      height: 300px;
+      padding: 5px;
+      width: 20%;
+      margin-bottom: 2%;
+      cursor: pointer; }
+    div .books-wrapper:after {
+      content: "";
+      display: block;
+      clear: both; }

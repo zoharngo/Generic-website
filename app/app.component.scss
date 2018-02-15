@@ -1,2 +1,12 @@
 @import "shared/style/scss/classes";
+@import "shared/style/scss/variables";
 
+footer{
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    background: $deepBlue;
+}

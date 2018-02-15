@@ -1,0 +1,6 @@
+<div (click)="publishSelection()">
+  <span class="country-name">{{country.name | previewText:15}}</span>
+  <span class="country-img">
+    <img [src]="country.flag" />
+  </span>
+</div>

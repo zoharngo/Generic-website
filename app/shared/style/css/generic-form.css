@@ -33,8 +33,7 @@ input[type=submit]:hover {
   width: 25%;
   border-radius: 5px;
   padding: 20px;
-  margin-left: 5%;
-  margin-top: 5%; }
+  margin-left: 35%; }
 
 form:after {
   content: "";

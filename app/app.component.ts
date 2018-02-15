@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  action: string = 'Login';
+  action: string = 'Home';
 
   loadForm(action: string) {
     console.log('onLoadForm: ' + action);
     this.action = action;
   }
+
 }

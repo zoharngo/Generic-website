@@ -7,17 +7,20 @@
     <label for="bDate">Birth Date</label>
     <input name="birthDate" id="bDate" type="date" [(ngModel)]="registerUser.birthDate" />
     <label for="country">Country</label>
-    <select name="country" id="country" [(ngModel)]="registerUser.country" (change)="setFlag()">
-        <option [ngValue]="undefined">Please Select</option>
-        <option *ngFor="let country of countriesList" [value]="country.name">
-          {{country.name}}
-        </option>
-      </select>
-      <span *ngIf="flagURL">
-        <img [src]="flagURL">
-      </span>
-    <input id="login" type="submit" />
+    <button (click)="onSelectCountry($event)">
+      <country-info [country]="selectedCountry"></country-info>
+    </button>
+    <ul *ngIf="countryListMode">
+      <li *ngFor="let country of countriesList">
+        <country-info [country]="country" (onCountrySelect)="setCountrySelection($event)"></country-info>
+      </li>
+    </ul>
+    <!--  <select *ngIf="countriesList?.length" name="country" id="country" [(ngModel)]="registerUser.country" (change)="setFlag($event)">
+      <option [ngValue]="undefined">Please Select</option>
+      <option  *ngFor="let country of countriesList" [value]="country.name">
+        <country-info [country]="country"></country-info>
+      </option>
+    </select> -->
+    <input type="submit" />
   </form>
 </div>
-
-<p *ngFor="let x of countryList">{{x.name}}</p>

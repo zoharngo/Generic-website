@@ -1,0 +1,14 @@
+div {
+  position: relative;
+  margin: 30px; }
+  div h1, div h2, div h3 {
+    padding-top: 2%;
+    text-align: center;
+    font-weight: normal;
+    font-family: cursive;
+    color: #032f3e; }
+  div img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 300px; }

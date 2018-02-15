@@ -7,8 +7,8 @@ export class CountriesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  fetchCountriesFlags(setter: (countriesFlagsList: Array<Country>) => void) {
+  fetchCountriesFlags() {
     let url = "https://restcountries.eu/rest/v2/all?fields=name;flag"
-    this.httpClient.get(url).subscribe(setter);
+    return this.httpClient.get<Array<Country>>(url);
   }
 }

@@ -1,6 +1,10 @@
 @import "app/shared/style/scss/reset";
 @import "app/shared/style/scss/variables";
 
-body{
-    background: $lightBlue;
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(8, 248, 248, 0.507)) ;
 }

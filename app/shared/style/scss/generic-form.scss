@@ -1,7 +1,7 @@
 @import "mixins";
 @import "variables";
 
-input[type=password], input[type=date], input[type=text], select {
+input[type=password], input[type=date], input[type=text], ul {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -11,6 +11,18 @@ input[type=password], input[type=date], input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+ul{
+    padding: 0;
+    background: #ccc;
+    li{
+        width: 100%;
+        
+    }
+    li:hover{
+        cursor: pointer;
+        background:rgb(231, 193, 186);
+    }
+}
 
 label{
     display: block;
@@ -18,7 +30,7 @@ label{
     color: white;
 }
 
-input[type=submit] {
+input[type=submit] , button{
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -28,6 +40,18 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
+
+button{
+    padding: {
+        top:1%;
+        left: 1%;
+        right: 1%;
+        bottom: 0;
+    }
+    background-color:#ccc;
+    color: black;
+}
+
 
 input[type=submit]:hover {
     background-color: #45a049;
@@ -40,8 +64,7 @@ input[type=submit]:hover {
     border-radius: 5px;
     padding: 20px;
     margin: {
-        left: 5%;
-        top: 5%;
+        left: 35%;
     }
 }
 

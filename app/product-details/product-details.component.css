@@ -1,0 +1,26 @@
+div {
+  width: 100%;
+  padding: 1%;
+  margin-bottom: 5%; }
+  div a {
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: normal;
+    font-weight: bolder;
+    padding-left: 5%; }
+  div img {
+    width: 250px;
+    height: 400px; }
+  div ul {
+    color: #032f3e; }
+    div ul .title {
+      text-decoration: underline;
+      margin-bottom: 10px; }
+    div ul li {
+      display: block;
+      text-align: center;
+      margin-bottom: 1%; }
+    div ul p {
+      text-align: left;
+      padding-left: 10px; }

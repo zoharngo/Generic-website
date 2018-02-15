@@ -13,7 +13,7 @@ export class HeaderComponent {
 
   @Output() onMenuClick: EventEmitter<string> = new EventEmitter<string>();
 
-  publish($event) {
+  publish() {
     this.onMenuClick.emit(event.srcElement.textContent);
   }
 

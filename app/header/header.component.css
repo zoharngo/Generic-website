@@ -1,8 +1,7 @@
 .wrapper {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -16,7 +15,7 @@
       clear: both; }
   #main-nav li {
     float: left;
-    width: 10%; }
+    width: 8%; }
   #main-nav a {
     color: #f8f9fb;
     text-decoration: none;

@@ -1,0 +1,18 @@
+@import "../shared/style/scss/variables";
+ul{
+    color : $deepBlue;
+    font-size: smaller;
+    li{
+        display: block;
+        text-align: center;
+        margin-bottom: 4%;
+    }
+    a{
+        display: block;
+    }
+
+    img{
+        height: 191px;
+    }
+
+}
